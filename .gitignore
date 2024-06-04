@@ -48,4 +48,9 @@ buildtree
 [Bb][Uu][Ii][Ll][Dd]
 
 external
+external\glfw
 
+.vscode
+
+ToDo.txt
+UsefullLinks.txt

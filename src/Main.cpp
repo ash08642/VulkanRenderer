@@ -1,15 +1,27 @@
+#define STB_IMAGE_IMPLEMENTATION
+#define TINYOBJLOADER_IMPLEMENTATION
+
 #include <iostream>
-#include <
-#include "vulkan/Vulkan.h"
+#include <cstdlib>
+#include <stdexcept>
+//include <GLFW/glfw3.h>
+//#include <vulkan/vulkan.hpp>
+//#include "vulkanInstances/instance/Instance.hpp"
+//#include "glfwWindow/window/Window.hpp"
+#include "Application.hpp"
+
 int main()
 {
-    Vulkan v = Vulkan();
-    std::cout
-        << "Hello Main"
-        << std::endl;
+    LiveWindow::Application app{};
 
-    int i;
-    std::cin >> i;
-
-    return 0;
+    try
+    {
+        app.run();
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
 }
